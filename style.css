@@ -37,3 +37,83 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:24px 0;margin-top:32px
 .kme{max-width:240px;width:100%;height:auto;background:#fff;border-radius:6px;padding:6px}
 .pdf-embed{width:100%;height:820px;border:0;border-radius:12px;background:#0a1a20}
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
+
+/* ===== Mobile polish ===== */
+@media (max-width: 600px) {
+  /* Container breathing room */
+  .container { 
+    max-width: 100%;
+    padding: 16px 14px;
+  }
+
+  /* Nav */
+  nav { position: sticky; top: 0; z-index: 10; }
+  .nav-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px 12px;
+    padding: 10px 14px;
+  }
+  .brand img { height: 28px; }           /* smaller crest/logo */
+  .menu {
+    justify-self: end;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;                             /* tighter button gaps */
+  }
+  .menu a { padding: 8px 10px; font-size: 13px; }
+
+  /* Headings & pill */
+  h1 { font-size: 28px; line-height: 1.1; margin: 10px 0 8px; }
+  .tag-pill { font-size: 12px; padding: 6px 10px; }
+
+  /* Hero becomes single column */
+  .hero { 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 8px 0 4px;
+  }
+  .hero-text { order: 1; }
+  .hero-media { order: 2; }
+  .hero-media img,
+  .hero-media video { 
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Buttons: full width, stacked */
+  .btn-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 12px 0 6px;
+  }
+  .btn, .btn-primary { width: 100%; text-align: center; }
+
+  /* One Sheet: fit nicely on phone */
+  .pdf-embed,
+  object[type="application/pdf"] {
+    width: 100% !important;
+    max-width: 100%;
+    height: 65vh;              /* tall enough to read, not endless */
+    border-radius: 8px;
+  }
+
+  /* Cards/grids on Cast & Creatives */
+  .grid { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;       /* 2-up on phones */
+    gap: 12px;
+  }
+  @media (max-width: 420px) {
+    .grid { grid-template-columns: 1fr; } /* 1-up on very small phones */
+  }
+  .card img { width: 100%; height: auto; border-radius: 8px; }
+
+  /* Footer */
+  footer { font-size: 12px; padding: 16px 12px; text-align: center; }
+}
