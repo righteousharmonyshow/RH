@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Sheet • Righteous Harmony</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pdf-wrap{
+      display:flex; flex-direction:column; align-items:center; gap:14px; margin:24px auto; 
+      padding:0 12px; max-width:740px; text-align:center;
+    }
+    .pdf-embed{
+      width:100%; max-width:600px; height:800px; 
+      border:0; box-shadow:0 8px 30px rgba(0,0,0,.25); border-radius:8px;
+    }
+    .btn{ display:inline-block; padding:.6rem .9rem; border-radius:8px; font-weight:700; 
+          background:#f4b000; color:#101826; text-decoration:none; }
+    .btn:hover{ filter:brightness(0.95); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-rh.png" alt="Righteous Harmony logo">
+        <strong>Righteous Harmony</strong>
+      </a>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="cast.html">Cast</a>
+        <a href="creatives.html">Creatives</a>
+        <a href="sizzle.html">Sizzle</a>
+        <a href="onesheet.html" class="active">One Sheet</a>
+        <a href="contact.html">Book the Show</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>One Sheet</h1>
+
+    <div class="pdf-wrap">
+      <object class="pdf-embed"
+              data="assets/Righteous-Harmony-One-Sheet.pdf"
+              type="application/pdf">
+        <p>
+          Can’t display the PDF? 
+          <a class="btn" href="assets/Righteous-Harmony-One-Sheet.pdf" target="_blank" rel="noopener">
+            Open the One Sheet
+          </a>
+        </p>
+      </object>
+
+      <a class="btn" href="assets/Righteous-Harmony-One-Sheet.pdf" download>
+        Download the One Sheet
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    © Righteous Harmony LLC · <a href="https://instagram.com/righteousharmonyshow" target="_blank" rel="noopener">@righteousharmonyshow</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
