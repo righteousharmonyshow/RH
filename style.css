@@ -721,3 +721,148 @@ html{scroll-behavior:smooth}
     font-size: 12px;
     color: rgba(244,236,216,.65);
   }
+/* ===== DESKTOP PREMIUM PACK (only screens > 900px) ===== */
+@media (min-width: 901px){
+
+  /* 1) Page lighting: cinematic, not flat */
+  body{
+    background:
+      radial-gradient(1100px 520px at 12% 10%, rgba(244,236,216,.12), transparent 60%),
+      radial-gradient(900px 420px at 78% 16%, rgba(191,163,106,.16), transparent 62%),
+      radial-gradient(900px 520px at 58% 88%, rgba(207,228,255,.06), transparent 60%),
+      var(--bg);
+  }
+
+  /* 2) Nav feels bespoke */
+  nav{
+    background: rgba(13,17,23,.78);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+
+  .menu a{
+    background: rgba(255,255,255,.02);
+    border-color: rgba(255,255,255,.14);
+    transition: transform .12s ease, background .12s ease, border-color .12s ease;
+  }
+  .menu a:hover{
+    transform: translateY(-1px);
+    background: rgba(191,163,106,.06);
+    border-color: rgba(191,163,106,.35);
+    text-decoration: none;
+  }
+  .menu a.active{
+    background: rgba(191,163,106,.10);
+    border-color: rgba(191,163,106,.45);
+  }
+
+  /* 3) Hero becomes a “hero” */
+  .hero{
+    position: relative;
+    padding: 64px 0 40px;
+    gap: 40px;
+  }
+
+  /* Spotlight behind hero */
+  .hero::before{
+    content:"";
+    position:absolute;
+    left:-120px;
+    top:-120px;
+    width: 720px;
+    height: 520px;
+    background: radial-gradient(closest-side, rgba(244,236,216,.16), transparent 70%);
+    filter: blur(2px);
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-140px;
+    top:-80px;
+    width: 760px;
+    height: 560px;
+    background: radial-gradient(closest-side, rgba(191,163,106,.18), transparent 72%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero > *{ position: relative; z-index:1; }
+
+  /* 4) Premium typographic hierarchy */
+  h1{
+    font-size: clamp(46px, 4.2vw, 62px);
+    letter-spacing: 1.2px;
+    font-weight: 850;
+    margin: 10px 0 12px;
+    text-shadow:
+      0 10px 30px rgba(0,0,0,.60),
+      0 0 60px rgba(191,163,106,.16);
+  }
+  .lead{
+    font-size: 1.06rem;
+    line-height: 1.7;
+    max-width: 56ch; /* keeps it looking designed */
+    color: rgba(244,236,216,.82);
+  }
+
+  /* 5) Badge feels like a marquee */
+  .badge{
+    background: rgba(191,163,106,.10);
+    border-color: rgba(191,163,106,.38);
+    color: rgba(244,236,216,.85);
+    box-shadow: 0 14px 40px rgba(0,0,0,.35);
+  }
+
+  /* 6) CTA: strong primary + elegant secondaries */
+  .cta{ margin-top: 18px; gap: 14px; }
+
+  .btn{
+    padding: 12px 18px;
+    border-radius: 14px;
+    box-shadow:
+      0 24px 70px rgba(0,0,0,.60),
+      0 0 0 1px rgba(255,255,255,.10) inset;
+    transition: transform .12s ease, filter .12s ease;
+  }
+  .btn:hover{
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+    text-decoration: none;
+  }
+
+  .btn.alt{
+    background: rgba(255,255,255,.03);
+    border-color: rgba(255,255,255,.16);
+  }
+  .btn.alt:hover{
+    background: rgba(191,163,106,.08);
+    border-color: rgba(191,163,106,.30);
+  }
+
+  /* 7) Poster card: “gallery mount” treatment */
+  .hero-media{
+    border-radius: 20px;
+    padding: 18px;
+    background:
+      radial-gradient(520px 420px at 50% 18%, rgba(244,236,216,.12), transparent 70%),
+      rgba(255,255,255,.02);
+    border: 1px solid rgba(255,255,255,.10);
+    box-shadow:
+      0 65px 180px rgba(0,0,0,.85),
+      0 0 0 1px rgba(255,255,255,.06);
+  }
+
+  .hero-poster{
+    max-width: 420px;  /* desktop presence */
+    border-radius: 14px;
+    box-shadow:
+      0 60px 160px rgba(0,0,0,.75),
+      0 0 0 1px rgba(255,255,255,.08);
+  }
+}
+
+/* Optional: slightly widen desktop container for more “premium breathing room” */
+@media (min-width: 1200px){
+  .container{ max-width: 1180px; }
+}
