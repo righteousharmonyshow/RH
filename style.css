@@ -899,3 +899,33 @@ html{scroll-behavior:smooth}
     padding: 64px 48px;
   }
 }
+.grid{
+  justify-items: center;
+}
+.card{
+  max-width: 240px;
+}
+  .hero-poster{
+  transform: translateY(-6px);
+}
+  a[href^="mailto"]{
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+  .pdf-embed,
+.hero-media img{
+  box-shadow:
+    0 70px 200px rgba(0,0,0,.85),
+    0 0 0 1px rgba(255,255,255,.08);
+}
+  h1{
+  position: relative;
+}
+h1::after{
+  content:"";
+  display:block;
+  width: 60px;
+  height: 2px;
+  background: rgba(191,163,106,.6);
+  margin-top: 10px;
+}
