@@ -447,3 +447,9 @@ html{scroll-behavior:smooth}
 .hero{
   padding-top: 48px;
 }
+
+@media (max-width: 600px){
+  .hero{ grid-template-columns: 1fr; }
+  .hero-media{ order: 1; }
+  .hero-text{ order: 2; }
+}
