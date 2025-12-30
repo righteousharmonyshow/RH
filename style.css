@@ -866,3 +866,36 @@ html{scroll-behavior:smooth}
 @media (min-width: 1200px){
   .container{ max-width: 1180px; }
 }
+  /* ===== GLOBAL DESKTOP STAGE DECK ===== */
+@media (min-width: 901px){
+
+  .container{
+    position: relative;
+  }
+
+  /* Main content plane */
+  .container > section,
+  .container > h1,
+  .container > h2,
+  .container > .hero,
+  .container > .grid,
+  .container > .hero-media{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(18,22,28,.85),
+        rgba(12,16,21,.85)
+      );
+    border-radius: 22px;
+    padding: 36px 40px;
+    box-shadow:
+      0 80px 220px rgba(0,0,0,.75),
+      0 0 0 1px rgba(255,255,255,.06);
+    margin-bottom: 36px;
+  }
+
+  /* Prevent double padding on hero */
+  .hero{
+    padding: 64px 48px;
+  }
+}
