@@ -929,3 +929,25 @@ h1::after{
   background: rgba(191,163,106,.6);
   margin-top: 10px;
 }
+/* ===== STAGE DECK (more robust) ===== */
+@media (min-width: 901px){
+
+  .container{
+    position: relative;
+  }
+
+  /* Wrap the whole page content area inside .container */
+  .container{
+    background:
+      linear-gradient(180deg, rgba(18,22,28,.85), rgba(12,16,21,.85));
+    border-radius: 22px;
+    padding: 42px 46px;
+    box-shadow:
+      0 80px 220px rgba(0,0,0,.75),
+      0 0 0 1px rgba(255,255,255,.06);
+  }
+
+  /* Keep nav/footer from feeling cramped against it */
+  nav + .container{ margin-top: 18px; }
+  footer{ margin-top: 28px; }
+}
