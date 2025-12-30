@@ -5,6 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sizzle • Righteous Harmony</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .video-breakout {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: 36px 0;
+    }
+
+    .big-video {
+      position: relative;
+      width: 92vw;             
+      max-width: 1500px;       
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 40px 120px rgba(0,0,0,.6);
+    }
+
+    .big-video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .big-video.alt {
+      width: 78vw;
+      max-width: 1200px;
+      opacity: 0.95;
+    }
+  
+    .lede {
+      text-align: center;
+      max-width: 820px;
+      margin: 16px auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .subsection {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 1.6rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .big-video,
+      .big-video.alt {
+        width: 100vw;
+        max-width: 100%;
+        border-radius: 12px;
+      }
+      .video-breakout { padding: 20px 0; }
+    }
+  </style>
 </head>
 
 <body>
@@ -28,19 +88,16 @@
 
 <div class="container">
   <h1>Sizzle Reel</h1>
-
   <p class="lede">
     Watch the main sizzle reel for a complete look at the show’s sound, style, and pacing.
   </p>
 </div>
 
-<!-- MAIN SIZZLE (FULL WIDTH) -->
-<section class="video-wrap">
-  <div class="hero-media video main-video">
+<section class="video-breakout">
+  <div class="big-video">
     <iframe
       src="https://www.youtube.com/embed/W8p0ARmAdAE"
       title="Righteous Harmony — Main Sizzle Reel"
-      frameborder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
@@ -49,19 +106,17 @@
 
 <div class="container">
   <h2 class="subsection">Alternate Cut</h2>
-
   <p class="lede">
     A shorter alternate cut — perfect for a quick preview of the show’s contemporary energy and vibe.
   </p>
 </div>
 
-<!-- ALTERNATE CUT (FULL WIDTH BUT SLIGHTLY SMALLER) -->
-<section class="video-wrap">
-  <div class="hero-media video alt-video">
+
+<section class="video-breakout">
+  <div class="big-video alt">
     <iframe
       src="https://www.youtube.com/embed/4TzoK63e8lw"
       title="Righteous Harmony — Alternate Sizzle Reel"
-      frameborder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
